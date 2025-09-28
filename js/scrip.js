@@ -24,7 +24,18 @@ function Calcular(){
              resultado =   n1 * n2
                 break;
             case "/":
-             resultado =   n1 / n2
+                if (n2 == 0 || n2 == 0.0 || n1 == 0.) {
+                    pResultado.innerText = "No se puede dividir entre 0"
+                    pResultado.style.color = "red"
+                    return;
+
+                    
+                } else{
+
+                        resultado =   n1 / n2
+                    }
+             
+
                 break;
         }
         pResultado.innerText = "=" + resultado
